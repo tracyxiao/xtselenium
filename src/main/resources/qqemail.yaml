@@ -1,0 +1,22 @@
+login_byaccount:
+  type:linkText
+  value:账号密码登录
+user_account:
+  type:id
+  value:u
+user_password:
+  type:id
+  value:p
+login_button:
+  type:id
+  value:login_button
+login_success_assert:
+  type:id
+  value:useralias
+login_fail_assert:
+  type:id
+  value:err_m
+logout_button:
+  type:class
+  value:toptitle
+

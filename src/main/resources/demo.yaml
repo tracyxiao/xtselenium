@@ -1,0 +1,15 @@
+baidu_input:
+  type:name
+  value:wd
+baidu_button:
+  type:id
+  value:su
+user_account:
+  type:id
+  value:input1
+user_password:
+  type:id
+  value:input2
+login_button:
+  type:id
+  value:signin
