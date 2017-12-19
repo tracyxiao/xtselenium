@@ -2,17 +2,17 @@ package tools;
 
 import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by P0061799 on 2017/12/1.
@@ -52,7 +52,7 @@ public class BasePage {
 
     public WebElement getLocator(String key) {
         WebElement element=null;
-        WebDriverWait wait;
+        //WebDriverWait wait;
         if(locator.ml.containsKey(key)) {
             HashMap<String, String> m = (HashMap)locator.ml.get(key);
             final String type =m.get("type");
@@ -67,9 +67,16 @@ public class BasePage {
                 } catch (Exception var10) {
                     element = null;
                 }*/
-            wait= new WebDriverWait(driver, 30);
+            /*wait= new WebDriverWait(driver, 30);
             wait.until(ExpectedConditions.visibilityOfElementLocated(getBy(type,value)));
-            element=driver.findElement(getBy(type,value));
+            element=driver.findElement(getBy(type,value));*/
+            Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+
+                    .withTimeout(30, TimeUnit.SECONDS)
+
+                    .pollingEvery(2, TimeUnit.SECONDS)
+
+                    .ignoring(NoSuchElementException.class);
         }
 
         else {
