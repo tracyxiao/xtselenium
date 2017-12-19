@@ -57,7 +57,7 @@ public class BasePage {
             HashMap<String, String> m = (HashMap)locator.ml.get(key);
             final String type =m.get("type");
             final String value =m.get("value");
-                try {
+                /*try {
                     wait= new WebDriverWait(driver, 30);
                     element=wait.until(new ExpectedCondition<WebElement>() {
                         public WebElement apply(WebDriver d) {
@@ -66,10 +66,10 @@ public class BasePage {
                     });
                 } catch (Exception var10) {
                     element = null;
-                }
-            /*wait= new WebDriverWait(driver, 30);
+                }*/
+            wait= new WebDriverWait(driver, 30);
             wait.until(ExpectedConditions.visibilityOfElementLocated(getBy(type,value)));
-            element=driver.findElement(getBy(type,value));*/
+            element=driver.findElement(getBy(type,value));
         }
 
         else {
