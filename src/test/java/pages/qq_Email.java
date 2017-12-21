@@ -18,7 +18,6 @@ public class qq_Email {
         ExcelData e=new ExcelData("src/main/resources/user.xlsx");
         return e.getExcelData();
     }
-
     @Test(dataProvider="user")
     public void login_test(HashMap<String, String> data) throws InterruptedException {
         BasePage basePage=new BasePage("qqemail");
