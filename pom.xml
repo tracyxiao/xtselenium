@@ -22,10 +22,22 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
+                    <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
+                            <name>listener</name>
+                            <value>org.uncommons.reportng.HTMLReporter</value>
+                        </property>
+                    </properties>
+
                     <suiteXmlFiles>
-                        <!--要执行的testng的.xml文件路径-->
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>test.xml</suiteXmlFile>
                     </suiteXmlFiles>
+
+                    <workingDirectory>target/</workingDirectory>
                 </configuration>
             </plugin>
         </plugins>
