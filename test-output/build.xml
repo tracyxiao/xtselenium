@@ -9,13 +9,13 @@
     <target name="transform">
         <property name="dir" value=""/>
 
-        <mkdir dir="E:/selenium/xtselenium/test-output/"/>
+        <mkdir dir="target/surefire-reports/"/>
 
-        <xslt in="E:/selenium/xtselenium/test-output/testng-results.xml"
-              style="E:/selenium/xtselenium/test-output/testng-results.xsl"
-              out="E:/selenium/xtselenium/test-output/index1.html"
+        <xslt in="target/surefire-reports/testng-results.xml"
+              style="target/surefire-reports/testng-results.xsl"
+              out="target/surefire-reports/index1.html"
               classpathref="test.classpath" processor="SaxonLiaison">
-            <param name="testNgXslt.outputDir" expression="E:/selenium/xtselenium/test-output/"/>
+            <param name="testNgXslt.outputDir" expression="target/surefire-reports/test-output/"/>
         </xslt>
     </target>
 </project>
