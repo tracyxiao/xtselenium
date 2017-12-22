@@ -14,16 +14,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
-                    <properties>
-                        <property>
-                            <name>usedefaultlisteners</name>
-                            <value>false</value>
-                        </property>
-                        <property>
-                            <name>listener</name>
-                            <value>org.uncommons.reportng.HTMLReporter</value>
-                        </property>
-                    </properties>
                     <suiteXmlFiles>
                         <suiteXmlFile>test.xml</suiteXmlFile>
                     </suiteXmlFiles>
@@ -106,16 +96,10 @@
             <version>1.2.14</version>
         </dependency>
         <dependency>
-            <groupId>org.uncommons</groupId>
-            <artifactId>reportng</artifactId>
-            <version>1.1.2</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.testng</groupId>
-                    <artifactId>testng</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
