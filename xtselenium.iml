@@ -90,9 +90,6 @@
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.5.5" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.14" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.uncommons:reportng:1.1.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: velocity:velocity:1.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: velocity:velocity-dep:1.4" level="project" />
     <orderEntry type="library" name="Maven: org.testng:testng:6.8" level="project" />
     <orderEntry type="library" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.google.inject:guice:3.0" level="project" />

@@ -1,0 +1,21 @@
+<project name="xtselenium" basedir=".">
+    <property name="lib.dir" value="lib"/>
+
+    <path id="test.classpath">
+        <!--adding the saxon jar to your classpath-->
+      <fileset dir="${lib.dir}" includes="*.jar"/>
+    </path>
+
+    <target name="transform">
+        <property name="dir" value=""/>
+
+        <mkdir dir="target/surefire-reports/"/>
+
+        <xslt in="target/surefire-reports/testng-results.xml"
+              style="target/surefire-reports/testng-results.xsl"
+              out="target/surefire-reports/index1.html"
+              classpathref="test.classpath" processor="SaxonLiaison">
+            <param name="testNgXslt.outputDir" expression="target/surefire-reports/test-output/"/>
+        </xslt>
+    </target>
+</project>
