@@ -3,7 +3,7 @@
 
     <path id="test.classpath">
         <!--adding the saxon jar to your classpath-->
-      <fileset dir="${lib.dir}" includes="*.jar"/>
+      <fileset dir="../lib" includes="*.jar"/>
     </path>
 
     <target name="transform">
