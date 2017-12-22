@@ -12,10 +12,10 @@
         <mkdir dir="target/surefire-reports/"/>
 
         <xslt in="target/surefire-reports/testng-results.xml"
-              style="target/surefire-reports/testng-results.xsl"
+              style="test-output/testng-results.xsl"
               out="target/surefire-reports/index1.html"
               classpathref="test.classpath" processor="SaxonLiaison">
-            <param name="testNgXslt.outputDir" expression="target/surefire-reports/test-output/"/>
+            <param name="testNgXslt.outputDir" expression="target/surefire-reports/"/>
         </xslt>
     </target>
 </project>
