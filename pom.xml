@@ -17,7 +17,6 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>test.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <workingDirectory>target/</workingDirectory>
                 </configuration>
             </plugin>
             <plugin>
