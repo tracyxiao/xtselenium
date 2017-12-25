@@ -2,6 +2,7 @@ package pages;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import tools.ExcelData;
 import tools.BasePage;
@@ -11,7 +12,8 @@ import java.util.HashMap;
 /**
  * Created by P0061799 on 2017/12/5.
  */
-public class qq_Email {
+@Listeners({ZTestReport.class})
+class qq_Email {
 
     @DataProvider(name="user")
     public Object[][] Numbers() throws Exception {
