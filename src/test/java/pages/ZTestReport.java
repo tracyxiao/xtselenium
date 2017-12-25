@@ -32,10 +32,13 @@ import com.google.gson.GsonBuilder;
 
 public class ZTestReport implements IReporter {
 	
-	private String path = System.getProperty("user.dir")+File.separator+"report.html";
+	//private String path = System.getProperty("user.dir")+File.separator+"report.html";
 	
-	private String templatePath = System.getProperty("user.dir")+File.separator+"template";
-	
+	//private String templatePath = System.getProperty("user.dir")+File.separator+"template";
+	private String path="report/report.html";
+
+	private String templatePath="report/template";
+
 	private int testsPass = 0;
 
 	private int testsFail = 0;
