@@ -13,14 +13,13 @@ import java.util.HashMap;
  * Created by P0061799 on 2017/12/5.
  */
 @Listeners({ZTestReport.class})
-class qq_Email {
-
-    @DataProvider(name="user")
+public class qq_Email {
+   @DataProvider(name="user")
     public Object[][] Numbers() throws Exception {
-        ExcelData e=new ExcelData("src/main/resources/user.xlsx");
+        ExcelData e=new ExcelData("src\\main\\resources\\user.xlsx");
         return e.getExcelData();
     }
-    @Test(dataProvider="user")
+    @Test(dataProvider="user",description = "编号1：正确的用户名和密码；编号2：错误的密码")
     public void login_test(HashMap<String, String> data) throws InterruptedException {
         BasePage basePage=new BasePage("qqemail");
         basePage.startTest("c","https://mail.qq.com/");
@@ -36,7 +35,7 @@ class qq_Email {
         }
         else {
             Assert.assertEquals(basePage.getLocator("login_success_assert").getText(),data.get("assert"));
-            basePage.getLocator("logout_button").click();
+            //basePage.getLocator("logout_button").click();
         }
     }
 }

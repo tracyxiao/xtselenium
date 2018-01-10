@@ -57,8 +57,16 @@ public class BasePage {
             HashMap<String, String> m = (HashMap)locator.ml.get(key);
             final String type =m.get("type");
             final String value =m.get("value");
-                /*try {
-                    wait= new WebDriverWait(driver, 30);
+                try {
+                    //wait= new WebDriverWait(driver, 30);
+                    Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+
+                    .withTimeout(30, TimeUnit.SECONDS)
+
+                    .pollingEvery(2, TimeUnit.SECONDS)
+
+                    .ignoring(NoSuchElementException.class);
+
                     element=wait.until(new ExpectedCondition<WebElement>() {
                         public WebElement apply(WebDriver d) {
                             return d.findElement(getBy(type,value));
@@ -66,17 +74,10 @@ public class BasePage {
                     });
                 } catch (Exception var10) {
                     element = null;
-                }*/
+                }
             /*wait= new WebDriverWait(driver, 30);
             wait.until(ExpectedConditions.visibilityOfElementLocated(getBy(type,value)));
             element=driver.findElement(getBy(type,value));*/
-            Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-
-                    .withTimeout(30, TimeUnit.SECONDS)
-
-                    .pollingEvery(2, TimeUnit.SECONDS)
-
-                    .ignoring(NoSuchElementException.class);
         }
 
         else {

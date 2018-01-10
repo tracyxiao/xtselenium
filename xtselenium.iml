@@ -89,6 +89,7 @@
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-remote-driver:3.5.3" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-nop:1.5.5" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.14" level="project" />
     <orderEntry type="library" name="Maven: org.testng:testng:6.8" level="project" />
     <orderEntry type="library" name="Maven: org.beanshell:bsh:2.0b4" level="project" />

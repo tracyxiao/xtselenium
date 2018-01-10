@@ -7128,24 +7128,42 @@
 </script>
 <script type="text/javascript">
     var resultData = {
-  "testPass": 0,
+  "testPass": 1,
   "testSkip": 0,
-  "totalTime": "0ms",
-  "testAll": 1,
-  "beginTime": "2017-12-25 17:37:20.061",
+  "totalTime": "60765ms",
+  "testAll": 2,
+  "beginTime": "2018-01-10 16:27:47.250",
   "testResult": [
     {
       "className": "pages.qq_Email",
       "methodName": "login_test",
-      "spendTime": "0ms",
+      "description": "编号1：正确的用户名和密码；编号2：错误的密码",
+      "spendTime": "37038ms",
+      "status": "成功",
+      "log": []
+    },
+    {
+      "className": "pages.qq_Email",
+      "methodName": "login_test",
+      "description": "编号1：正确的用户名和密码；编号2：错误的密码",
+      "spendTime": "23727ms",
       "status": "失败",
       "log": [
-        "java.lang.RuntimeException",
-        "    org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:147)",
-        "    org.testng.internal.Parameters.handleParameters(Parameters.java:426)",
-        "    org.testng.internal.Invoker.handleParameters(Invoker.java:1383)",
-        "    org.testng.internal.Invoker.createParameters(Invoker.java:1075)",
-        "    org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)",
+        "java.lang.AssertionError: expected [你输入的帐号或密码不正确，请重新输入。] but found []",
+        "    org.testng.Assert.fail(Assert.java:94)",
+        "    org.testng.Assert.failNotEquals(Assert.java:494)",
+        "    org.testng.Assert.assertEquals(Assert.java:123)",
+        "    org.testng.Assert.assertEquals(Assert.java:176)",
+        "    org.testng.Assert.assertEquals(Assert.java:186)",
+        "    pages.qq_Email.login_test(qq_Email.java:34)",
+        "    sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
+        "    sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
+        "    sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
+        "    java.lang.reflect.Method.invoke(Method.java:498)",
+        "    org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)",
+        "    org.testng.internal.Invoker.invokeMethod(Invoker.java:714)",
+        "    org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)",
+        "    org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)",
         "    org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)",
         "    org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)",
         "    org.testng.TestRunner.privateRun(TestRunner.java:767)",
@@ -7165,7 +7183,7 @@
     }
   ],
   "testFail": 1,
-  "testName": "20171225173720049"
+  "testName": "20180110162743595"
 };
 
     function clickRow(obj){
