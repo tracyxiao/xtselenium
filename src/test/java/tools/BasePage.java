@@ -1,5 +1,6 @@
 package tools;
 
+import com.google.common.base.Function;
 import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -66,12 +67,16 @@ public class BasePage {
                     .pollingEvery(2, TimeUnit.SECONDS)
 
                     .ignoring(NoSuchElementException.class);
+                    element=wait.until(
+                            new Function<WebDriver, WebElement>() {
+                                public WebElement apply(WebDriver driver) {
+                                    return driver.findElement(getBy(type,value));
 
-                    element=wait.until(new ExpectedCondition<WebElement>() {
+                    /*element=wait.until(new ExpectedCondition<WebElement>() {
                         public WebElement apply(WebDriver d) {
                             return d.findElement(getBy(type,value));
-                        }
-                    });
+                        }*/
+                    }});
                 } catch (Exception var10) {
                     element = null;
                 }
