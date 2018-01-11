@@ -12,7 +12,7 @@ import java.util.HashMap;
 /**
  * Created by P0061799 on 2017/12/5.
  */
-@Listeners({ZTestReport.class})
+//@Listeners({ZTestReport.class})
 public class qq_Email {
    @DataProvider(name="user")
     public Object[][] Numbers() throws Exception {
