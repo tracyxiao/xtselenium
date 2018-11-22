@@ -12,7 +12,7 @@ import java.util.HashMap;
 /**
  * Created by P0061799 on 2017/12/5.
  */
-//@Listeners({ZTestReport.class})
+@Listeners({ZTestReport.class})
 public class qq_Email {
    @DataProvider(name="user")
     public Object[][] Numbers() throws Exception {
@@ -24,7 +24,7 @@ public class qq_Email {
         BasePage basePage=new BasePage("qqemail");
         basePage.startTest("c","https://mail.qq.com/");
         basePage.driver.switchTo().frame("login_frame");
-        //basePage.getLocator("login_byaccount").click();
+        basePage.getLocator("login_byaccount").click();
         basePage.getLocator("user_account").clear();
         basePage.getLocator("user_account").sendKeys(data.get("user"));
         basePage.getLocator("user_password").sendKeys(data.get("password"));
